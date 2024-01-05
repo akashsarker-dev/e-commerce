@@ -5,6 +5,7 @@ import Copyright from './components/copyright/Copyright'
 import Footer from './components/footer/Footer'
 import Navbar from './components/navbar/Navbar'
 import SearchNav from './components/searchnav/SearchNav'
+import Newproduct from './pages/newproduct/Newproduct'
 
 function App() {
 
@@ -13,6 +14,7 @@ function App() {
       <Navbar></Navbar>
       <SearchNav></SearchNav>
       <Banner></Banner>
+      <Newproduct></Newproduct>
       <Footer></Footer>
       <Copyright></Copyright>
       
