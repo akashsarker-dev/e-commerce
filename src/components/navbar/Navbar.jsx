@@ -1,23 +1,28 @@
 import React from 'react'
-import Logo from '../../assets/Logo.png'
+// import Logo from '../../assets/Logo.png'
+import { BiMenuAltLeft } from "react-icons/bi";
+
 
 const Navbar = () => {
   return (
-    <div className='flex items-center container mx-auto py-8'>
-    <div className='w-2/5'>
-        <img src={Logo}/>
-    </div>
 
-    <div className='w-3/5'>
-        <ul className='flex gap-10 text-base font-normal font-dm-sans'>
+
+<div class="grid grid-cols-12 gap-4 max-w-container mx-auto py-8">
+  <div class="col-span-3">    
+  <div >
+        <BiMenuAltLeft className=' text-4xl'></BiMenuAltLeft>
+    </div>
+    </div>
+  <div class="col-span-6 mx-auto">
+  <ul className='flex gap-10 text-xl font-medium font-roboto text-primary'>
             <li>Home</li>
             <li>Shop</li>
             <li>About</li>
             <li>Contacts</li>
         </ul>
-    </div>
-      
-    </div>
+  </div>
+  <div class="col-span-3">03</div>
+</div>
   )
 }
 

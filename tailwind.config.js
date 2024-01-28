@@ -7,12 +7,16 @@ export default {
   theme: {
 
     extend: {
+      maxWidth: {
+        'container': '1240px',
+      },
       colors: {
-        'primary': '#F3F3F3',
+        'primary': '#010F1C',
+        'second-primary': '#0989FF',
       },
     },
     fontFamily: {
-      'dm-sans': ['DM Sans', 'sans-serif', ],
+      'roboto': ['Roboto', 'sans-serif', ],
     }
   },
   plugins: [],

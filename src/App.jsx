@@ -11,8 +11,8 @@ function App() {
 
   return (
     <>
-      <Navbar></Navbar>
       <SearchNav></SearchNav>
+      <Navbar></Navbar>
       <Banner></Banner>
       <Newproduct></Newproduct>
       <Footer></Footer>

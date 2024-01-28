@@ -1,35 +1,39 @@
 import React from "react";
-import { MdOutlineSort } from "react-icons/md";
 import { IoSearch } from "react-icons/io5";
 import { FaShoppingCart } from "react-icons/fa";
 import { FaUser } from "react-icons/fa";
-import { GoTriangleDown } from "react-icons/go";
 
 const SearchNav = () => {
   return (
-    <div className="bg-primary">
-      <div className="container mx-auto py-5 flex">
-        <div className="flex items-center">
-          <MdOutlineSort />
-          Shop by
+
+    <div className=" border-2 border-[#00000021]">
+      <div class="grid grid-cols-12 gap-4 items-center max-w-container mx-auto py-4">
+        <div class="col-span-3">
+          <h1 className="text-4xl font-extrabold text-primary">
+            ShopCraftify
+          </h1>
         </div>
-        <div className=" bg-white py-4 px-5 w-[600px] rounded-lg mx-auto">
-          <input className=" text-sm focus:outline-none w-[95%] "
-            type="search"
-            placeholder="Search Products"/>
-          <button type="button">
-            <IoSearch ></IoSearch>
-          </button>
+        <div class="col-span-6 ">
+
+          <div className=" relative bg-white border-4 border-second-primary py-3 px-5 w-[600px] rounded-lg mx-auto">
+            <input className=" text-lg focus:outline-none w-[90%] "
+              type="search"
+              placeholder="Search Products" />
+            <div className=" py-4 px-5 absolute top-0 right-0 w-15 h-full bg-second-primary" type="button">
+              <IoSearch className="text-white text-2xl" ></IoSearch>
+            </div>
+          </div>
+
         </div>
-        <div className="flex items-center">
-          <>
+        <div class="col-span-3  flex justify-end items-center gap-6">
+          <div className="w-11 h-11 rounded-full border-2 border-[rgba(1,15,28,0.1)] p-3.5">
             <FaUser />
-            <GoTriangleDown />
-          </>
-          <FaShoppingCart />
+          </div>
+            <FaShoppingCart className=" text-2xl text-primary"></FaShoppingCart>
         </div>
       </div>
     </div>
+
   );
 };
 
