@@ -13,6 +13,7 @@ export default {
       colors: {
         'primary': '#010F1C',
         'second-primary': '#0989FF',
+        'third-primary': '#55585B',
       },
     },
     fontFamily: {
