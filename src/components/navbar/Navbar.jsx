@@ -2,6 +2,7 @@ import React from "react";
 // import Logo from '../../assets/Logo.png'
 import { BiMenuAltLeft } from "react-icons/bi";
 import { FiPhoneCall } from "react-icons/fi";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
@@ -13,7 +14,10 @@ const Navbar = () => {
       </div>
       <div class="col-span-6 mx-auto">
         <ul className="flex gap-10 text-xl font-medium font-roboto text-primary">
-          <li>Home</li>
+          <li>
+            <Link>
+            Home
+            </Link></li>
           <li>Shop</li>
           <li>About</li>
           <li>Contacts</li>
