@@ -1,17 +1,15 @@
 import React from 'react'
-import { FaFacebookF } from "react-icons/fa";
-import { FaLinkedinIn } from "react-icons/fa";
-import { FaInstagram } from "react-icons/fa";
+import Payment from '../../assets/payment.png'
 
 const Copyright = () => {
   return (
-    <div className='flex justify-between py-4 container max-w-container mx-auto border-teal-100 border-t-2'>
+    <div className='bg-[#F4F7F9]'>
+    <div className='flex justify-between py-4 container max-w-container mx-auto border-[#E3E7EA] border-t-2'>
     <div className='flex gap-3'>
-        <FaFacebookF></FaFacebookF>
-        <FaLinkedinIn></FaLinkedinIn>
-        <FaInstagram></FaInstagram>
+        <img src={Payment} />
     </div>
-    <div className='py-4'>2020 Orebi Minimal eCommerce Figma Template by Adveits</div>
+    <div className='py-4 text-[#888A8C]'>© 2023 All Rights Reserved | WooCommerce Theme by Themepure</div>
+    </div>
     </div>
   )
 }
