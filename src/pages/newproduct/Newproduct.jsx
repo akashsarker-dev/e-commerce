@@ -4,31 +4,26 @@ import { IoIosHeart } from "react-icons/io";
 import { HiOutlineRefresh } from "react-icons/hi";
 import { FaShoppingCart } from "react-icons/fa";
 
+import { IoCartOutline } from "react-icons/io5";
+import { MdOutlineRemoveRedEye } from "react-icons/md";
+import { CiHeart } from "react-icons/ci";
+
 const Newproduct = () => {
   return (
     <div className="max-w-container mx-auto py-28">
       <h3 className="mb-12 text-4xl font-roboto font-bold">New Arrivals</h3>
       <div>
         <div className="grid grid-cols-4 gap-4">
-          <div className="w-[300px] border-2 border-gray-300">
-            <div className=" group relative ">
-              <img src={ProductImg} alt="" />
-              {/* <div className=" absolute bottom-0 left-0 flex flex-col  float-right justify-center h-[156px] w-full group-hover:bg-[#00000061] opacity-0 group-hover:opacity-100 duration-300 ">
-              <div className=" flex gap-3 items-center justify-end ">
-                <p>Add to Wish List</p>
-                <IoIosHeart />
+          <div className="w-[300px] border-[0.5px] border-gray-200 rounded-xl hover:shadow-xl duration-300 overflow-hidden cursor-pointer group">
+            <div className=" h-[240px] overflow-hidden relative ">
+              <img className="group-hover:scale-125 duration-500 " src={ProductImg} alt="" />
+              <div className=" absolute top-[40%] right-[-20%] group-hover:right-5 text-2xl p-2 gap-4 flex flex-col shadow-lg rounded-md duration-300">
+              <IoCartOutline></IoCartOutline>
+              <MdOutlineRemoveRedEye></MdOutlineRemoveRedEye>
+              <CiHeart></CiHeart>
               </div>
-              <div className=" flex gap-3 items-center justify-end ">
-                <p>Compare</p>
-                <HiOutlineRefresh />
-              </div>
-              <div className=" flex gap-3 items-center justify-end ">
-                <p>Add to Cart</p>
-                <FaShoppingCart />
-              </div>
-            </div> */}
             </div>
-            <div className=" py-5 pl-4 border-t-2 border-b-slate-300">
+            <div className="py-5 pl-4 border-t-[0.5px] border-gray-200">
               <p className=" text-third-primary font-roboto font-medium">
                 Electronics
               </p>
@@ -40,25 +35,16 @@ const Newproduct = () => {
               </p>
             </div>
           </div>
-          <div className="w-[300px] border-2 border-gray-300">
-            <div className=" group relative ">
-              <img src={ProductImg} alt="" />
-              {/* <div className=" absolute bottom-0 left-0 flex flex-col  float-right justify-center h-[156px] w-full group-hover:bg-[#00000061] opacity-0 group-hover:opacity-100 duration-300 ">
-              <div className=" flex gap-3 items-center justify-end ">
-                <p>Add to Wish List</p>
-                <IoIosHeart />
+          <div className="w-[300px] border-[0.5px] border-gray-200 rounded-xl hover:shadow-xl duration-300 overflow-hidden cursor-pointer group">
+            <div className=" h-[240px] overflow-hidden relative ">
+              <img className="group-hover:scale-125 duration-500 " src={ProductImg} alt="" />
+              <div className=" absolute top-[40%] right-[-20%] group-hover:right-5 text-2xl p-2 gap-4 flex flex-col shadow-lg rounded-md duration-300">
+              <IoCartOutline></IoCartOutline>
+              <MdOutlineRemoveRedEye></MdOutlineRemoveRedEye>
+              <CiHeart></CiHeart>
               </div>
-              <div className=" flex gap-3 items-center justify-end ">
-                <p>Compare</p>
-                <HiOutlineRefresh />
-              </div>
-              <div className=" flex gap-3 items-center justify-end ">
-                <p>Add to Cart</p>
-                <FaShoppingCart />
-              </div>
-            </div> */}
             </div>
-            <div className=" py-5 pl-4 border-t-2 border-b-slate-300">
+            <div className="py-5 pl-4 border-t-[0.5px] border-gray-200">
               <p className=" text-third-primary font-roboto font-medium">
                 Electronics
               </p>
@@ -70,25 +56,16 @@ const Newproduct = () => {
               </p>
             </div>
           </div>
-          <div className="w-[300px] border-2 border-gray-300">
-            <div className=" group relative ">
-              <img src={ProductImg} alt="" />
-              {/* <div className=" absolute bottom-0 left-0 flex flex-col  float-right justify-center h-[156px] w-full group-hover:bg-[#00000061] opacity-0 group-hover:opacity-100 duration-300 ">
-              <div className=" flex gap-3 items-center justify-end ">
-                <p>Add to Wish List</p>
-                <IoIosHeart />
+          <div className="w-[300px] border-[0.5px] border-gray-200 rounded-xl hover:shadow-xl duration-300 overflow-hidden cursor-pointer group">
+            <div className=" h-[240px] overflow-hidden relative ">
+              <img className="group-hover:scale-125 duration-500 " src={ProductImg} alt="" />
+              <div className=" absolute top-[40%] right-[-20%] group-hover:right-5 text-2xl p-2 gap-4 flex flex-col shadow-lg rounded-md duration-300">
+              <IoCartOutline></IoCartOutline>
+              <MdOutlineRemoveRedEye></MdOutlineRemoveRedEye>
+              <CiHeart></CiHeart>
               </div>
-              <div className=" flex gap-3 items-center justify-end ">
-                <p>Compare</p>
-                <HiOutlineRefresh />
-              </div>
-              <div className=" flex gap-3 items-center justify-end ">
-                <p>Add to Cart</p>
-                <FaShoppingCart />
-              </div>
-            </div> */}
             </div>
-            <div className=" py-5 pl-4 border-t-2 border-b-slate-300">
+            <div className="py-5 pl-4 border-t-[0.5px] border-gray-200">
               <p className=" text-third-primary font-roboto font-medium">
                 Electronics
               </p>
@@ -100,25 +77,16 @@ const Newproduct = () => {
               </p>
             </div>
           </div>
-          <div className="w-[300px] border-2 border-gray-300">
-            <div className=" group relative ">
-              <img src={ProductImg} alt="" />
-              {/* <div className=" absolute bottom-0 left-0 flex flex-col  float-right justify-center h-[156px] w-full group-hover:bg-[#00000061] opacity-0 group-hover:opacity-100 duration-300 ">
-              <div className=" flex gap-3 items-center justify-end ">
-                <p>Add to Wish List</p>
-                <IoIosHeart />
+          <div className="w-[300px] border-[0.5px] border-gray-200 rounded-xl hover:shadow-xl duration-300 overflow-hidden cursor-pointer group">
+            <div className=" h-[240px] overflow-hidden relative ">
+              <img className="group-hover:scale-125 duration-500 " src={ProductImg} alt="" />
+              <div className=" absolute top-[40%] right-[-20%] group-hover:right-5 text-2xl p-2 gap-4 flex flex-col shadow-lg rounded-md duration-300">
+              <IoCartOutline></IoCartOutline>
+              <MdOutlineRemoveRedEye></MdOutlineRemoveRedEye>
+              <CiHeart></CiHeart>
               </div>
-              <div className=" flex gap-3 items-center justify-end ">
-                <p>Compare</p>
-                <HiOutlineRefresh />
-              </div>
-              <div className=" flex gap-3 items-center justify-end ">
-                <p>Add to Cart</p>
-                <FaShoppingCart />
-              </div>
-            </div> */}
             </div>
-            <div className=" py-5 pl-4 border-t-2 border-b-slate-300">
+            <div className="py-5 pl-4 border-t-[0.5px] border-gray-200">
               <p className=" text-third-primary font-roboto font-medium">
                 Electronics
               </p>
@@ -130,25 +98,16 @@ const Newproduct = () => {
               </p>
             </div>
           </div>
-          <div className="w-[300px] border-2 border-gray-300">
-            <div className=" group relative ">
-              <img src={ProductImg} alt="" />
-              {/* <div className=" absolute bottom-0 left-0 flex flex-col  float-right justify-center h-[156px] w-full group-hover:bg-[#00000061] opacity-0 group-hover:opacity-100 duration-300 ">
-              <div className=" flex gap-3 items-center justify-end ">
-                <p>Add to Wish List</p>
-                <IoIosHeart />
+          <div className="w-[300px] border-[0.5px] border-gray-200 rounded-xl hover:shadow-xl duration-300 overflow-hidden cursor-pointer group">
+            <div className=" h-[240px] overflow-hidden relative ">
+              <img className="group-hover:scale-125 duration-500 " src={ProductImg} alt="" />
+              <div className=" absolute top-[40%] right-[-20%] group-hover:right-5 text-2xl p-2 gap-4 flex flex-col shadow-lg rounded-md duration-300">
+              <IoCartOutline></IoCartOutline>
+              <MdOutlineRemoveRedEye></MdOutlineRemoveRedEye>
+              <CiHeart></CiHeart>
               </div>
-              <div className=" flex gap-3 items-center justify-end ">
-                <p>Compare</p>
-                <HiOutlineRefresh />
-              </div>
-              <div className=" flex gap-3 items-center justify-end ">
-                <p>Add to Cart</p>
-                <FaShoppingCart />
-              </div>
-            </div> */}
             </div>
-            <div className=" py-5 pl-4 border-t-2 border-b-slate-300">
+            <div className="py-5 pl-4 border-t-[0.5px] border-gray-200">
               <p className=" text-third-primary font-roboto font-medium">
                 Electronics
               </p>
@@ -160,25 +119,16 @@ const Newproduct = () => {
               </p>
             </div>
           </div>
-          <div className="w-[300px] border-2 border-gray-300">
-            <div className=" group relative ">
-              <img src={ProductImg} alt="" />
-              {/* <div className=" absolute bottom-0 left-0 flex flex-col  float-right justify-center h-[156px] w-full group-hover:bg-[#00000061] opacity-0 group-hover:opacity-100 duration-300 ">
-              <div className=" flex gap-3 items-center justify-end ">
-                <p>Add to Wish List</p>
-                <IoIosHeart />
+          <div className="w-[300px] border-[0.5px] border-gray-200 rounded-xl hover:shadow-xl duration-300 overflow-hidden cursor-pointer group">
+            <div className=" h-[240px] overflow-hidden relative ">
+              <img className="group-hover:scale-125 duration-500 " src={ProductImg} alt="" />
+              <div className=" absolute top-[40%] right-[-20%] group-hover:right-5 text-2xl p-2 gap-4 flex flex-col shadow-lg rounded-md duration-300">
+              <IoCartOutline></IoCartOutline>
+              <MdOutlineRemoveRedEye></MdOutlineRemoveRedEye>
+              <CiHeart></CiHeart>
               </div>
-              <div className=" flex gap-3 items-center justify-end ">
-                <p>Compare</p>
-                <HiOutlineRefresh />
-              </div>
-              <div className=" flex gap-3 items-center justify-end ">
-                <p>Add to Cart</p>
-                <FaShoppingCart />
-              </div>
-            </div> */}
             </div>
-            <div className=" py-5 pl-4 border-t-2 border-b-slate-300">
+            <div className="py-5 pl-4 border-t-[0.5px] border-gray-200">
               <p className=" text-third-primary font-roboto font-medium">
                 Electronics
               </p>
@@ -190,25 +140,16 @@ const Newproduct = () => {
               </p>
             </div>
           </div>
-          <div className="w-[300px] border-2 border-gray-300">
-            <div className=" group relative ">
-              <img src={ProductImg} alt="" />
-              {/* <div className=" absolute bottom-0 left-0 flex flex-col  float-right justify-center h-[156px] w-full group-hover:bg-[#00000061] opacity-0 group-hover:opacity-100 duration-300 ">
-              <div className=" flex gap-3 items-center justify-end ">
-                <p>Add to Wish List</p>
-                <IoIosHeart />
+          <div className="w-[300px] border-[0.5px] border-gray-200 rounded-xl hover:shadow-xl duration-300 overflow-hidden cursor-pointer group">
+            <div className=" h-[240px] overflow-hidden relative ">
+              <img className="group-hover:scale-125 duration-500 " src={ProductImg} alt="" />
+              <div className=" absolute top-[40%] right-[-20%] group-hover:right-5 text-2xl p-2 gap-4 flex flex-col shadow-lg rounded-md duration-300">
+              <IoCartOutline></IoCartOutline>
+              <MdOutlineRemoveRedEye></MdOutlineRemoveRedEye>
+              <CiHeart></CiHeart>
               </div>
-              <div className=" flex gap-3 items-center justify-end ">
-                <p>Compare</p>
-                <HiOutlineRefresh />
-              </div>
-              <div className=" flex gap-3 items-center justify-end ">
-                <p>Add to Cart</p>
-                <FaShoppingCart />
-              </div>
-            </div> */}
             </div>
-            <div className=" py-5 pl-4 border-t-2 border-b-slate-300">
+            <div className="py-5 pl-4 border-t-[0.5px] border-gray-200">
               <p className=" text-third-primary font-roboto font-medium">
                 Electronics
               </p>
@@ -220,25 +161,16 @@ const Newproduct = () => {
               </p>
             </div>
           </div>
-          <div className="w-[300px] border-2 border-gray-300">
-            <div className=" group relative ">
-              <img src={ProductImg} alt="" />
-              {/* <div className=" absolute bottom-0 left-0 flex flex-col  float-right justify-center h-[156px] w-full group-hover:bg-[#00000061] opacity-0 group-hover:opacity-100 duration-300 ">
-              <div className=" flex gap-3 items-center justify-end ">
-                <p>Add to Wish List</p>
-                <IoIosHeart />
+          <div className="w-[300px] border-[0.5px] border-gray-200 rounded-xl hover:shadow-xl duration-300 overflow-hidden cursor-pointer group">
+            <div className=" h-[240px] overflow-hidden relative ">
+              <img className="group-hover:scale-125 duration-500 " src={ProductImg} alt="" />
+              <div className=" absolute top-[40%] right-[-20%] group-hover:right-5 text-2xl p-2 gap-4 flex flex-col shadow-lg rounded-md duration-300">
+              <IoCartOutline></IoCartOutline>
+              <MdOutlineRemoveRedEye></MdOutlineRemoveRedEye>
+              <CiHeart></CiHeart>
               </div>
-              <div className=" flex gap-3 items-center justify-end ">
-                <p>Compare</p>
-                <HiOutlineRefresh />
-              </div>
-              <div className=" flex gap-3 items-center justify-end ">
-                <p>Add to Cart</p>
-                <FaShoppingCart />
-              </div>
-            </div> */}
             </div>
-            <div className=" py-5 pl-4 border-t-2 border-b-slate-300">
+            <div className="py-5 pl-4 border-t-[0.5px] border-gray-200">
               <p className=" text-third-primary font-roboto font-medium">
                 Electronics
               </p>
