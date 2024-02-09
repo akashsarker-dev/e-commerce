@@ -14,23 +14,19 @@ import Breadcrumbs from '../../components/utils/Breadcrumbs';
 const columns = [
   {
     accessorKey: 'name.firstName',
-    header: 'First Name',
+    header: 'Product',
   },
   {
     accessorKey: 'name.lastName',
-    header: 'Last Name',
+    header: 'Price',
   },
   {
     accessorKey: 'address',
-    header: 'Address',
+    header: 'Quantity',
   },
   {
     accessorKey: 'city',
-    header: 'City',
-  },
-  {
-    accessorKey: 'state',
-    header: 'State',
+    header: 'Total',
   },
 ];
 
@@ -47,7 +43,7 @@ const Cart = () => {
       rowsPerPageOptions: [5, 10, 15],
       variant: 'outlined',
     },
-    paginationDisplayMode: 'pages',
+    // paginationDisplayMode: 'pages',
   });
 
   return (
@@ -60,9 +56,9 @@ const Cart = () => {
       </div>
       <div>
         <table className="min-w-full text-left text-sm font-light text-surface  border-collapse border border-gray-300">
-          <thead className="border-b border-neutral-200 font-medium dark:border-white/10">
+          <thead className="border-b border-neutral-200 font-medium bg-[#F5F5F3]">
             {table.getHeaderGroups().map((headerGroup) => (
-              <tr key={headerGroup.id}>
+              <tr  key={headerGroup.id}>
                 {headerGroup.headers.map((header) => (
                   <th key={header.id} scope="col" className="px-6 py-4">
                     {header.isPlaceholder ? null :
