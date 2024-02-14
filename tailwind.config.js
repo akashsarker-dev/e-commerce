@@ -18,6 +18,7 @@ export default {
     },
     fontFamily: {
       'roboto': ['Roboto', 'sans-serif', ],
+      'jost': ['Jost', 'sans-serif', ],
     }
   },
   plugins: [],

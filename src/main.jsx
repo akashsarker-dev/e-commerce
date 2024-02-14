@@ -18,11 +18,16 @@ import {
 } from "react-router-dom";
 import "./index.css";
 import App from './App.jsx'
+import ProductDetails from "./pages/productdetails/ProductDetails.jsx";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App></App>,
+  }, 
+   {
+    path: "/productdetails",
+    element: <ProductDetails/>
   },
 ]);
 
