@@ -10,6 +10,7 @@ import Registration from "./pages/signup/Registration.jsx";
 import Login from "./pages/login/Login.jsx";
 import { Notfound } from "./pages/notfound/Notfound.jsx";
 import Contacts from "./pages/contacts/Contacts.jsx";
+import Cart from "./pages/Cart/Cart.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -20,6 +21,7 @@ const router = createBrowserRouter(
       <Route path='/login' element={<Login />} />
       <Route path='/contacts' element={<Contacts />} />
       <Route path='/products' element={<Products />} />
+      <Route path='/cart' element={<Cart />} />
       <Route path='/products/productinfo' element={<Productinfo />} />
       <Route path="*" element={<Notfound />} />
     </Route>
@@ -34,7 +36,6 @@ ReactDOM.createRoot(document.getElementById("root")).render(
 );
 
 
-// import * as React from "react";
 // import * as ReactDOM from "react-dom/client";
 // import {
 //   createBrowserRouter,
