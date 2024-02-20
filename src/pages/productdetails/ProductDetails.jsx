@@ -4,8 +4,30 @@ import { FiPlus } from "react-icons/fi";
 import { HiMinus } from "react-icons/hi";
 import { CiHeart } from "react-icons/ci";
 import { GoArrowSwitch } from "react-icons/go";
+import ProductImg from "../../assets/product.png";
+import { IoCartOutline } from 'react-icons/io5';
+import { MdOutlineRemoveRedEye } from 'react-icons/md';
 
 const ProductDetails = () => {
+    const products = [
+        {
+          category: 'Electronics',
+          title: 'Mini Portable Mobile Phone Powerbank for',
+          price: '125.00$',
+        },{
+          category: 'Electronics',
+          title: 'Mini Portable Mobile Phone Powerbank for',
+          price: '125.00$',
+        },{
+          category: 'Electronics',
+          title: 'Mini Portable Mobile Phone Powerbank for',
+          price: '125.00$',
+        },{
+          category: 'Electronics',
+          title: 'Mini Portable Mobile Phone Powerbank for',
+          price: '125.00$',
+        },
+      ];
 
     const [count, setCount] = useState(0);
 
@@ -40,18 +62,51 @@ const ProductDetails = () => {
                     </div>
                     <button type="button" className='py-3 bg-second-primary w-full text-white font-jost font-medium text-base'>Buy Now</button>
                     <div className=' flex items-center gap-3 py-4 border-b-2 border-r-emerald-800'>
-                        <div className=' flex items-center gap-1 text-base'>
+                        <div className=' flex items-center gap-1 text-base cursor-pointer hover:text-second-primary duration-300'>
                             <GoArrowSwitch></GoArrowSwitch>
                             Compare
                         </div>
                         
-                        <div className=' flex items-center gap-1 text-base'>
+                        <div className=' flex items-center gap-1 text-base cursor-pointer hover:text-second-primary duration-300'>
                             <CiHeart></CiHeart>
                             Add To Wishlist
                         </div>
                     </div>
                 </div>
             </div>
+
+            <div className='max-w-container mx-auto py-20'>
+      <div className='mx-auto text-center mb-10'>
+        <h4 className='text-second-primary text-base'>Next day Products</h4>
+        <h2 className='text-primary text-[44px] font-medium'>Related products</h2>
+      </div>
+
+      <div className=' flex gap-10'>
+      {products.map((product, index) => (
+        <div key={index} className="w-[300px] border-[0.5px] border-gray-200 rounded-xl hover:shadow-xl duration-300 overflow-hidden cursor-pointer group ">
+          <div className="h-[240px] overflow-hidden relative">
+            <img className="group-hover:scale-125 duration-500" src={ProductImg} alt="" />
+            <div className="absolute top-[40%] right-[-20%] group-hover:right-5 text-2xl p-2 gap-4 flex flex-col shadow-lg rounded-md duration-300">
+            <IoCartOutline></IoCartOutline>
+              <MdOutlineRemoveRedEye></MdOutlineRemoveRedEye>
+              <CiHeart></CiHeart>
+            </div>
+          </div>
+          <div className="py-5 pl-4 border-t-[0.5px] border-gray-200">
+            <p className="text-third-primary font-roboto font-medium">
+              {product.category}
+            </p>
+            <h4 className="text-lg font-medium text-primary w-[300px] py-2">
+              {product.title}
+            </h4>
+            <p className="text-[#0989FF] font-roboto font-bold text-base">
+              {product.price}
+            </p>
+          </div>
+        </div>
+      ))}
+      </div>
+    </div>
         </>
     )
 }
