@@ -4,6 +4,7 @@ import { BiMenuAltLeft } from "react-icons/bi";
 import { FiPhoneCall } from "react-icons/fi";
 import { Link } from "react-router-dom";
 import { FaAngleRight } from "react-icons/fa6";
+import Sidebar from "../sidebar/Sidebar";
 
 const Navbar = () => {
   const [sidebar, setSidebar] = useState(false);
@@ -31,11 +32,13 @@ const Navbar = () => {
     <>
       <div class="grid grid-cols-12 gap-4 max-w-container mx-auto py-8">
         <div class="col-span-3">
-          <div>
-            <BiMenuAltLeft
-              onClick={handleSidebar}
-              className=" text-4xl relative"
-            ></BiMenuAltLeft>
+          <div className=" relative">
+            <BiMenuAltLeft onClick={handleSidebar} className=" text-4xl cursor-pointer" ></BiMenuAltLeft>
+          {sidebar && (
+            <div ref={mobileNavRef} className=" w-[260px] bg-[#2D2D2D] z-40   mt-4  absolute top-5 left-3 " >
+              <Sidebar></Sidebar>
+            </div>
+          )}
           </div>
         </div>
         <div class="col-span-6 mx-auto">
@@ -57,26 +60,6 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-      {sidebar && (
-        <div
-          ref={mobileNavRef}
-          className=" w-[260px] bg-[#2D2D2D] z-40  mt-40 ml-20 absolute top-5 left-3">
-          <ul>
-            <li className=" flex items-center justify-between py-4 px-5 text-base font-roboto text-[rgba(255,255,255,0.7)] border-b-[1px] border-[#3b3b3b] ">
-              Furniture <FaAngleRight></FaAngleRight>
-            </li>
-            <li className=" flex items-center justify-between py-4 px-5 text-base font-roboto text-[rgba(255,255,255,0.7)] border-b-[1px] border-[#3b3b3b] ">
-              Furniture <FaAngleRight></FaAngleRight>
-            </li>
-            <li className=" flex items-center justify-between py-4 px-5 text-base font-roboto text-[rgba(255,255,255,0.7)] border-b-[1px] border-[#3b3b3b] ">
-              Furniture <FaAngleRight></FaAngleRight>
-            </li>
-            <li className=" flex items-center justify-between py-4 px-5 text-base font-roboto text-[rgba(255,255,255,0.7)] border-b-[1px] border-[#3b3b3b] ">
-              Furniture <FaAngleRight></FaAngleRight>
-            </li>
-          </ul>
-        </div>
-      )}
     </>
   );
 };

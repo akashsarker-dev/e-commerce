@@ -2,7 +2,7 @@ import * as React from "react";
 import * as ReactDOM from "react-dom/client";
 import "./index.css";
 
-import {createRoutesFromElements,createBrowserRouter, Route,RouterProvider} from "react-router-dom";
+import { createRoutesFromElements, createBrowserRouter, Route, RouterProvider } from "react-router-dom";
 import { Rootlayout } from "./components/layout/Rootlayout.jsx";
 import Home from "./pages/home/Home.jsx";
 
@@ -11,9 +11,8 @@ const router = createBrowserRouter(
     <Route
       path="/"
       element={<Rootlayout />}>
-     
-        <Route index element={<Home />} />
-      </Route>
+      <Route index element={<Home />} />
+    </Route>
   )
 );
 
