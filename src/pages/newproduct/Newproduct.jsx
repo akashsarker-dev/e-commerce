@@ -3,6 +3,8 @@ import Slider from "react-slick";
 import { Badge } from "../../components/layout/Badge";
 import ProductImg from "../../assets/product.png";
 import Productdetails from "../../components/layout/Productdetails";
+import { AiFillBackward } from "react-icons/ai";
+import { AiFillForward } from "react-icons/ai";
 
 function Newproduct() {
   const settings = {
@@ -11,6 +13,8 @@ function Newproduct() {
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 3,
+    nextArrow: <AiFillForward />,
+    prevArrow: <AiFillBackward />,
   };
   return (
     <div className="max-w-container mx-auto">
@@ -54,5 +58,3 @@ function Newproduct() {
 }
 
 export default Newproduct;
-
-
