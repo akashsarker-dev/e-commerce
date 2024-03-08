@@ -67,11 +67,8 @@ function Newproducts() {
                 </div>
                 <div className="w-[300px] border-[0.5px] border-gray-200 rounded-xl hover:shadow-xl duration-300 overflow-hidden cursor-pointer group">
                     <div className="h-[240px] overflow-hidden relative">
-                        <img
-                            className="group-hover:scale-125 duration-500"
-                            src={ProductImg}
-                            alt=""
-                        />
+                        <img className="group-hover:scale-125 duration-500"src={ProductImg}
+                            alt=""  />
                         <Badge></Badge>
                     </div>
                     <Productdetails></Productdetails>

@@ -7,8 +7,10 @@ import { GoArrowSwitch } from "react-icons/go";
 import ProductImg from "../../assets/product.png";
 import { IoCartOutline } from 'react-icons/io5';
 import { MdOutlineRemoveRedEye } from 'react-icons/md';
+import { IoIosArrowForward } from "react-icons/io";
+import  Breadcrumbs  from '../../components/layout/Breadcrumbs';
 
-const ProductDetails = () => {
+const Products = () => {
   const products = [
     {
       category: 'Electronics',
@@ -41,7 +43,9 @@ const ProductDetails = () => {
     }
   };
   return (
-    <>
+    <div className=' max-w-container mx-auto gap-10 '>{
+    }
+      <Breadcrumbs></Breadcrumbs>
       <div className=' max-w-container mx-auto flex flex-wrap gap-10 py-20'>
         <>
           <img src={ProductDetailsImg} alt="" />
@@ -107,8 +111,8 @@ const ProductDetails = () => {
           ))}
         </div>
       </div>
-    </>
+    </div>
   )
 }
 
-export default ProductDetails
+export default Products
