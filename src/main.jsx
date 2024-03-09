@@ -5,6 +5,7 @@ import { createRoutesFromElements, createBrowserRouter, Route, RouterProvider } 
 import { Rootlayout } from "./components/layout/Rootlayout.jsx";
 import Home from "./pages/home/Home.jsx";
 import Products from "./pages/Products/Products.jsx";
+import Productinfo from "./pages/productinfo/Productinfo.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -13,6 +14,7 @@ const router = createBrowserRouter(
       element={<Rootlayout />}>
       <Route index element={<Home />} />
       <Route path='/products' element={<Products />} />
+      <Route path='/products/productinfo' element={<Productinfo />} />
     </Route>
   )
 );

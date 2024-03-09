@@ -49,7 +49,7 @@ const Navbar = () => {
         <div class="col-span-6 mx-auto">
           <ul className="flex gap-10 text-xl font-medium font-roboto text-primary">
             <li>
-              <Link>Home</Link>
+              Home
             </li>
             <li>Shop</li>
             <li>About</li>
