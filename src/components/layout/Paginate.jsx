@@ -5,6 +5,10 @@ import ProductImg from '../../assets/product.png'
 
 const items = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14];
 
+const lastElement = items.length + 1;
+console.log(lastElement);
+
+
 function Items({ currentItems }) {
   return (
 <div className=' flex flex-wrap gap-2'>
@@ -26,12 +30,13 @@ function Items({ currentItems }) {
 export default function Paginate({ itemsPerPage }) {
   const [itemOffset, setItemOffset] = useState(0);
   const endOffset = itemOffset + itemsPerPage;
-//   console.log(`Loading items from ${itemOffset} to ${endOffset}`);
+  console.log(`Loading items from ${itemOffset} to ${endOffset}`);
   const currentItems = items.slice(itemOffset, endOffset);
   const pageCount = Math.ceil(items.length / itemsPerPage);
+  console.log(items.length);
 
   const handlePageClick = (event) => {
-    console.log(event.selected,'eeeeeeee');
+    // console.log(event.selected,'eeeeeeee');
     const newOffset = (event.selected * itemsPerPage) % items.length;
     console.log(
       `User requested page number ${event.selected}, which is offset ${newOffset}`
@@ -41,7 +46,9 @@ export default function Paginate({ itemsPerPage }) {
 
   return (
     <>
+      
       <Items currentItems={currentItems} />
+      <div className=' flex items-center justify-between'>
       <ReactPaginate
         nextLabel="next >"
         onPageChange={handlePageClick}
@@ -49,7 +56,7 @@ export default function Paginate({ itemsPerPage }) {
         marginPagesDisplayed={2}
         pageCount={pageCount}
         
-        previousLabel="< previous"
+        previousLabel={itemOffset === 0 ? "" : "< previous"}
         pageClassName="page-item"
         pageLinkClassName="page-link inline-block border border-[#F0F0F0] px-2 py-1 "
         previousClassName="page-item"
@@ -61,8 +68,18 @@ export default function Paginate({ itemsPerPage }) {
         breakLinkClassName="page-link "
         containerClassName="flex gap-2.5 items-center py-4"
         activeClassName="active bg-[#262626] text-white"
-        renderOnZeroPageCount={null}
-      />
+        renderOnZeroPageCount={null} />
+      
+      {items.length == +1 ? (
+        <p>Products from {itemOffset} to {endOffset} of {items.length}</p>
+      ) : (
+        <p>Products from {itemOffset} to {items.length}</p>
+      )}
+      
+      </div>
+        <div>
+          
+        </div>
     </>
   );
 }

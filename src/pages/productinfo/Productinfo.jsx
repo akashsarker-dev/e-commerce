@@ -10,7 +10,7 @@ export default function Productinfo() {
         <div className=' flex gap-5 py-32'>
             <div className='w-1/5 bg-red-300'>rdjgjdnfgsnd</div>
             <div className='w-4/5 bg-red-500 p-10'>
-                <Paginate itemsPerPage={6} ></Paginate>
+                <Paginate itemsPerPage={6}></Paginate>
             </div>
         </div>
     </div>
