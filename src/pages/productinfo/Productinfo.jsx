@@ -3,6 +3,11 @@ import Breadcrumbs from '../../components/layout/Breadcrumbs';
 import Paginate from '../../components/layout/Paginate';
 
 export default function Productinfo() {
+  const [showItems , setShowItems] = useState(9)
+  const handleShowItems= (e)=>{
+    setShowItems(e.target.value);
+    
+  }
   return (
     <div className=' max-w-container mx-auto'>
       <Breadcrumbs></Breadcrumbs>
@@ -16,8 +21,8 @@ export default function Productinfo() {
 
             <form class="w-[240px] ">
              
-              <select id="countries" class="bg-gray-50 border border-[#F0F0F0] text-gray-900 text-sm rounded-lg focus:outline-none focus:border-[#F0F0F0] block w-full p-2.5 cursor-pointer ">
-                <option selected>Featured</option>
+              <select id="countries" class="bg-gray-50 border border-[#F0F0F0] text-gray-900 text-sm rounded-lg focus:outline-none focus:border-[#F0F0F0] block w-full p-2.5 cursor-pointer " defaultValue="Featured">
+                <option  value="Featured">Featured</option>
                 <option value="US">United States</option>
                 <option value="CA">Canada</option>
                 <option value="FR">France</option>
@@ -27,23 +32,22 @@ export default function Productinfo() {
             
             </>
              <>
-            <label htmlFor="countries">Show :</label>
+            <label htmlFor="showitems">Show :</label>
 
             <form class="w-[240px] ">
              
-              <select id="countries" class="bg-gray-50 border border-[#F0F0F0] text-gray-900 text-sm rounded-lg focus:outline-none focus:border-[#F0F0F0] block w-full p-2.5 cursor-pointer ">
-                <option selected>show items</option>
-                <option value="US">12</option>
-                <option value="CA">24</option>
-                <option value="FR">36</option>
-                <option value="DE">48</option>
+              <select onChange={handleShowItems} id="showitems" class="bg-gray-50 border border-[#F0F0F0] text-gray-900 text-sm rounded-lg focus:outline-none focus:border-[#F0F0F0] block w-full p-2.5 cursor-pointer " defaultValue="items">
+                <option  value="items">show items</option>
+                <option value="9">9</option>
+                <option value="18">18</option>
+                <option value="27">27</option>
               </select>
             </form>
             
             </>
 
           </div>
-          <Paginate itemsPerPage={6}></Paginate>
+          <Paginate itemsPerPage={showItems}></Paginate>
         </div>
       </div>
     </div>
