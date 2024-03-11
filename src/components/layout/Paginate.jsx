@@ -11,12 +11,12 @@ console.log(lastElement);
 
 function Items({ currentItems }) {
   return (
-<div className=' flex flex-wrap gap-2'>
+<div className='grid md:grid-cols-3 gap-4 grid-cols-1 sm:grid-cols-2'>
       {currentItems &&
         currentItems.map((item) => (
           <div key={item}>
-            <div className=" bg-amber-200 border-[0.5px] border-gray-200 rounded-xl hover:shadow-xl duration-300 overflow-hidden cursor-pointer group">
-              <div className="h-[240px] overflow-hidden relative">
+            <div className=" border-[0.5px] border-gray-200 rounded-xl hover:shadow-xl duration-300 overflow-hidden cursor-pointer group">
+              <div>
                 <img
                   className="group-hover:scale-125 duration-500" src={ProductImg} alt="" />
               </div>
@@ -30,10 +30,10 @@ function Items({ currentItems }) {
 export default function Paginate({ itemsPerPage }) {
   const [itemOffset, setItemOffset] = useState(0);
   const endOffset = itemOffset + itemsPerPage;
-  console.log(`Loading items from ${itemOffset} to ${endOffset}`);
+  // console.log(`Loading items from ${itemOffset} to ${endOffset}`);
   const currentItems = items.slice(itemOffset, endOffset);
   const pageCount = Math.ceil(items.length / itemsPerPage);
-  console.log(items.length);
+  // console.log(items.length);
 
   const handlePageClick = (event) => {
     // console.log(event.selected,'eeeeeeee');
@@ -58,7 +58,7 @@ export default function Paginate({ itemsPerPage }) {
         
         previousLabel={itemOffset === 0 ? "" : "< previous"}
         pageClassName="page-item"
-        pageLinkClassName="page-link inline-block border border-[#F0F0F0] px-2 py-1 "
+        pageLinkClassName="page-link inline-block border border-[#262626] px-2 py-1 "
         previousClassName="page-item"
         previousLinkClassName="page-link"
         nextClassName="page-item"
@@ -85,10 +85,3 @@ export default function Paginate({ itemsPerPage }) {
 }
 
 
-// import React from 'react'
-
-// export default function Paginate() {
-//   return (
-//     <div>Paginate</div>
-//   )
-// }
