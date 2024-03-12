@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import ReactPaginate from 'react-paginate';
 import ProductImg from '../../assets/product.png'
 
-const items = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,];
+const items = [11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60];
 
 const lastElement = items.length + 1;
 console.log(lastElement);
@@ -19,6 +19,7 @@ function Items({ currentItems }) {
               <div>
                 <img
                   className="group-hover:scale-125 duration-500" src={ProductImg} alt="" />
+                  <p>{item}</p>
               </div>
             </div>
           </div>
@@ -70,11 +71,9 @@ export default function Paginate({ itemsPerPage }) {
         activeClassName="active bg-[#262626] text-white"
         renderOnZeroPageCount={null} />
       
-      {items.length == +1 ? (
+   
         <p>Products from {itemOffset} to {endOffset} of {items.length}</p>
-      ) : (
-        <p>Products from {itemOffset} to {items.length}</p>
-      )}
+      
       
       </div>
         <div>
