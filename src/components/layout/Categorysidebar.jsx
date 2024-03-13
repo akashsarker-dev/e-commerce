@@ -1,4 +1,3 @@
-// Categorysidebar.js
 import React, { useState } from 'react';
 import { IoMdArrowDropdown } from 'react-icons/io';
 
@@ -9,7 +8,7 @@ export default function Categorysidebar() {
     <div>
       <h4 onClick={()=>setShow(!show)}
         className='font-bold text-xl text-[#262626] mb-4 flex items-center justify-between cursor-pointer' >
-        Shop by Brand{' '}
+        Shop by Brand
         <IoMdArrowDropdown className={`h-14 ${show ? 'rotate-180 duration-300' : ''}`} />
       </h4>
       {show && (

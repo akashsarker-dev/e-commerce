@@ -40,8 +40,8 @@ const Navbar = () => {
           <div className=" relative">
             <BiMenuAltLeft onClick={handleSidebar} className=" text-4xl cursor-pointer" ></BiMenuAltLeft>
           {sidebar && (
-            <div ref={mobileNavRef} className=" w-[260px] bg-[#2D2D2D] z-40   mt-4  absolute top-5 left-3 " >
-              <Sidebar></Sidebar>
+            <div ref={mobileNavRef} className=" w-[260px] bg-[#2D2D2D] z-40   mt-4 absolute top-5 left-3" >
+              <Sidebar ></Sidebar>
             </div>
           )}
           </div>

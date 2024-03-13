@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import Breadcrumbs from '../../components/layout/Breadcrumbs';
 import Paginate from '../../components/layout/Paginate';
-import Leftsidebar from '../../components/layout/Leftsidebar';
 import  Categorysidebar  from '../../components/layout/Categorysidebar';
+import Brandsidebar from '../../components/layout/Brandsidebar';
+import Colorsidebar from '../../components/layout/Colorsidebar';
 
 export default function Productinfo() {
   const [showItems , setShowItems] = useState(9)
@@ -19,8 +20,9 @@ export default function Productinfo() {
 
       <div className=' flex gap-5 py-20'>
         <div className='w-1/5 bg-[#F3F3F3] p-4 rounded-md'>
-        <Leftsidebar />
           <Categorysidebar />
+          <Brandsidebar></Brandsidebar>
+          <Colorsidebar></Colorsidebar>
         </div>
         <div className='w-4/5 bg-slate-200 p-10 rounded-lg'>
           <div className=" mb-10 flex items-center gap-6 justify-end">
