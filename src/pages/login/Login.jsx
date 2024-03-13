@@ -9,7 +9,6 @@ export default function Login() {
       <Pagetitle></Pagetitle>
       <Breadcrumbs></Breadcrumbs>
       <Formtitle title="Returning Customer" />
-      <form action=""></form>
     </div>
   );
 }
