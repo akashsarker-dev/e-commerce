@@ -8,8 +8,7 @@ export default function Breadcrumbs() {
 
   return (
     <div>
-      <h2 className="font-bold text-[49px] text-primary">Products</h2>
-      <p className="flex items-center text-base">
+      <p className="flex items-center text-base mt-3">
         <Link to="/">Home</Link>
         {pathSegments.map((segment, index) => (
           <React.Fragment key={segment}>

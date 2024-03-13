@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import Breadcrumbs from '../../components/layout/Breadcrumbs';
 import Paginate from '../../components/layout/Paginate';
 import  Categorysidebar  from '../../components/layout/Categorysidebar';
 import Brandsidebar from '../../components/layout/Brandsidebar';
 import Colorsidebar from '../../components/layout/Colorsidebar';
+import Breadcrumbs from '../../components/utils/Breadcrumbs';
 
 export default function Productinfo() {
   const [showItems , setShowItems] = useState(9)
@@ -16,6 +16,8 @@ export default function Productinfo() {
   
   return (
     <div className=' max-w-container mx-auto'>
+      
+      <h2 className="font-bold text-[49px] text-primary">Products</h2>
       <Breadcrumbs></Breadcrumbs>
 
       <div className=' flex gap-5 py-20'>

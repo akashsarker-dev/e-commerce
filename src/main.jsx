@@ -7,14 +7,20 @@ import Home from "./pages/home/Home.jsx";
 import Products from "./pages/Products/Products.jsx";
 import Productinfo from "./pages/productinfo/Productinfo.jsx";
 import Registration from "./pages/signup/Registration.jsx";
+import Login from "./pages/login/Login.jsx";
+import { Notfound } from "./pages/notfound/Notfound.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
+    <Route>
     <Route path="/" element={<Rootlayout />}>
       <Route index element={<Home />} />
       <Route path='/registration' element={<Registration />} />
+      <Route path='/login' element={<Login />} />
       <Route path='/products' element={<Products />} />
       <Route path='/products/productinfo' element={<Productinfo />} />
+      <Route path="*" element={<Notfound />} />
+    </Route>
     </Route>
   )
 );

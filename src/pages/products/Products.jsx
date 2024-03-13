@@ -7,8 +7,7 @@ import { GoArrowSwitch } from "react-icons/go";
 import ProductImg from "../../assets/product.png";
 import { IoCartOutline } from 'react-icons/io5';
 import { MdOutlineRemoveRedEye } from 'react-icons/md';
-import { IoIosArrowForward } from "react-icons/io";
-import  Breadcrumbs  from '../../components/layout/Breadcrumbs';
+import Breadcrumbs from '../../components/utils/Breadcrumbs';
 
 const Products = () => {
   const products = [
