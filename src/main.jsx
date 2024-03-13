@@ -6,13 +6,13 @@ import { Rootlayout } from "./components/layout/Rootlayout.jsx";
 import Home from "./pages/home/Home.jsx";
 import Products from "./pages/Products/Products.jsx";
 import Productinfo from "./pages/productinfo/Productinfo.jsx";
+import Registration from "./pages/signup/Registration.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route
-      path="/"
-      element={<Rootlayout />}>
+    <Route path="/" element={<Rootlayout />}>
       <Route index element={<Home />} />
+      <Route path='/registration' element={<Registration />} />
       <Route path='/products' element={<Products />} />
       <Route path='/products/productinfo' element={<Productinfo />} />
     </Route>
