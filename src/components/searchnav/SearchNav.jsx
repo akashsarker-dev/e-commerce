@@ -1,7 +1,9 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { IoSearch } from "react-icons/io5";
 import { FaShoppingCart } from "react-icons/fa";
 import { FaUser } from "react-icons/fa";
+import { Link } from "react-router-dom";
+import Loader from './../utils/Loader';
 
 const SearchNav = () => {
   const [show , setShow] = useState(false)
@@ -9,14 +11,36 @@ const SearchNav = () => {
   const handleCart =()=>{
     setShow(true)
   }
+
+  // const mobileNavRef = useRef(null);
+
+
+  const mobileNavRef = useRef(null);
+
+  useEffect(() => {
+    const handleOutsideClick = (event) => {
+      if (mobileNavRef.current && !mobileNavRef.current.contains(event.target)) {
+        closeMobileMenu();
+      }
+    };
+  
+    window.addEventListener("mousedown", handleOutsideClick);
+    return () => {
+      window.removeEventListener("mousedown", handleOutsideClick);
+    };
+  }, [mobileNavRef]);
+
+  const closeMobileMenu = () => {
+    setShow(false);
+  };
   return (
 
     <div className=" border-2 border-[#00000021]">
       <div className="grid grid-cols-12 gap-4 items-center max-w-container mx-auto py-4">
         <div className="col-span-3">
-          <h1 className="text-4xl font-extrabold text-primary">
+          <Link to={'/'} className="text-4xl font-extrabold text-primary">
             ShopCraftify
-          </h1>
+          </Link>
         </div>
         <div className="col-span-6 ">
 
@@ -31,12 +55,14 @@ const SearchNav = () => {
 
         </div>
         <div className="col-span-3  flex justify-end items-center gap-6">
-          <div className="w-11 h-11 rounded-full border-2 border-[rgba(1,15,28,0.1)] p-3.5">
-            <FaUser onClick={handleCart} />
+          
+          <div onClick={handleCart} className="w-11 relative h-11 rounded-full border-2 border-[rgba(1,15,28,0.1)] p-3.5 cursor-pointer">
+            <FaUser  />
             {
               show &&
-              <div className=" w-40 h-10 bg-red-400">
-
+              <div ref={mobileNavRef} className=" mt-7 flex flex-col w-40 bg-slate-200  absolute top-6 rounded -left-8  p-3">
+                  <Link className="hover:text-blue-500 text-xl font-semibold" to="/registration">Registration</Link>
+                  <Link className="hover:text-blue-500 text-xl font-semibold" to="/login">Login</Link>
               </div>
             }
           </div>

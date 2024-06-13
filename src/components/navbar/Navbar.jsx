@@ -48,12 +48,12 @@ const Navbar = () => {
         </div>
         <div class="col-span-6 mx-auto">
           <ul className="flex gap-10 text-xl font-medium font-roboto text-primary">
-            <li>
+            <Link to={"/"}>
               Home
-            </li>
-            <li>Shop</li>
-            <li>About</li>
-            <li>Contacts</li>
+            </Link>
+            <Link Link to={"/shop"}>Shop</Link>
+            <Link to={"/about"}>About</Link>
+            <Link to={"/contact"}>Contacts</Link>
           </ul>
         </div>
         <div class="col-span-3">
