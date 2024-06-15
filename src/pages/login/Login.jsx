@@ -9,6 +9,8 @@ import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import { ToastContainer, toast, Bounce } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { useDispatch } from "react-redux";
+import { loginInfo } from "../../slices/userSlice";
 
 export default function Login() {
   const [show ,setShow] = useState(false)
@@ -21,6 +23,7 @@ export default function Login() {
     email: "",  
     password: "",
   });
+  const dispatch = useDispatch();
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
@@ -52,6 +55,9 @@ export default function Login() {
           theme: "dark",
           transition: Bounce,
           })
+          dispatch(loginInfo(response.data)) 
+          localStorage.setItem('user', JSON.stringify(loginInfo(response.data)))
+
           setTimeout(() => {
             navigate("/"); // Replace with your desired navigation path
           }, 3000);

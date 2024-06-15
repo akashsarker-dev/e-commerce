@@ -4,6 +4,7 @@ import { FaShoppingCart } from "react-icons/fa";
 import { FaUser } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import Loader from './../utils/Loader';
+import UserButton from "../userbutton/UserButton";
 
 const SearchNav = () => {
   const [show , setShow] = useState(false)
@@ -60,10 +61,7 @@ const SearchNav = () => {
             <FaUser  />
             {
               show &&
-              <div ref={mobileNavRef} className=" mt-7 flex flex-col w-40 bg-slate-200  absolute top-6 rounded -left-8  p-3">
-                  <Link className="hover:text-blue-500 text-xl font-semibold" to="/registration">Registration</Link>
-                  <Link className="hover:text-blue-500 text-xl font-semibold" to="/login">Login</Link>
-              </div>
+              <UserButton ref={mobileNavRef}/>
             }
           </div>
             <FaShoppingCart className=" text-2xl text-primary"></FaShoppingCart>

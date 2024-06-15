@@ -10,8 +10,8 @@ import Login from "./pages/login/Login.jsx";
 import { Notfound } from "./pages/notfound/Notfound.jsx";
 import Contacts from "./pages/contacts/Contacts.jsx";
 import Shop from './pages/Shop/Shop';
-import Productinfo from "./pages/productinfo/Productinfo.jsx";
-// import Cart from "./pages/Cart/Cart.jsx";
+import { Provider } from 'react-redux'
+import store from "./store.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -33,35 +33,7 @@ const router = createBrowserRouter(
 );
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <React.StrictMode>
-    <RouterProvider router={router} />
-  </React.StrictMode>
+  <Provider store={store}>
+     <RouterProvider router={router} />
+    </Provider>
 );
-
-
-// import * as ReactDOM from "react-dom/client";
-// import {
-//   createBrowserRouter,
-//   RouterProvider,
-// } from "react-router-dom";
-// import "./index.css";
-// import App from './App.jsx'
-// import ProductDetails from "./pages/productdetails/ProductDetails.jsx";
-
-
-// const router = createBrowserRouter([
-//   {
-//     path: "/",
-//     element: <App></App>,
-//   }, 
-//    {
-//     path: "/productdetails",
-//     element: <ProductDetails/>
-//   },
-// ]);
-
-// ReactDOM.createRoot(document.getElementById("root")).render(
-//   <React.StrictMode>
-//     <RouterProvider router={router} />
-//   </React.StrictMode>
-// );
