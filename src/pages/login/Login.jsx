@@ -76,19 +76,7 @@ export default function Login() {
       <Breadcrumbs></Breadcrumbs>
       {/* <Formtitle title="Returning Customer" /> */}
 
-      <ToastContainer
-        position="top-right"
-        autoClose={5000}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-        theme="light"
-        transition={Bounce}
-      />
+     
 
       <div className=" text-[#333]">
       <div className="min-h-screen flex flex-col items-center justify-center">
