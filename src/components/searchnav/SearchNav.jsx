@@ -4,14 +4,17 @@ import { FaShoppingCart } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import UserButton from "../userbutton/UserButton";
 import { FaUser } from "react-icons/fa6";
+import CartPopup from "../layout/Cartpopup";
 
-const SearchNav = () => {
+const SearchNav = ({className}) => {
   const [showUserMenu, setShowUserMenu] = useState(false);
+  const [cardPopup, setCardPopup] = useState(false);
   const mobileNavRef = useRef(null);
 
   useEffect(() => {
     const handleOutsideClick = (event) => {
       if (mobileNavRef.current && !mobileNavRef.current.contains(event.target)) {
+        setCardPopup(false);
         setShowUserMenu(false);
       }
     };
@@ -22,9 +25,13 @@ const SearchNav = () => {
     };
   }, []);
 
+  const handlePopupCard = () => {
+    setCardPopup((prev) => !prev);
+  };
   const handleUserButtonClick = () => {
     setShowUserMenu((prev) => !prev);
   };
+
 
   return (
     <div className="border-2 border-[#00000021]">
@@ -54,7 +61,12 @@ const SearchNav = () => {
             <FaUser />
             {showUserMenu && <UserButton ref={mobileNavRef} />}
           </div>
-          <FaShoppingCart className="text-2xl text-primary" />
+          <div className="relative">
+          
+          <FaShoppingCart onClick={handlePopupCard} className="text-2xl text-primary cursor-pointer " />
+          {cardPopup && 
+          <CartPopup ref={mobileNavRef} className="absolute right-0 top-8"  />}
+          </div>
         </div>
       </div>
     </div>

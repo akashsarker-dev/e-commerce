@@ -8,6 +8,8 @@ import { MdOutlineRemoveRedEye } from 'react-icons/md';
 import { Link, useParams } from 'react-router-dom';
 import axios from 'axios';
 import Breadcrumbs from '../../components/utils/Breadcrumbs';
+import { useDispatch } from 'react-redux';
+import CartSlice, { cartTotal } from '../../slices/CartSlice';
 
 const Products = () => {
   const { id } = useParams();
@@ -33,7 +35,10 @@ const Products = () => {
   };
   if (!product) return null;
 
+  const dispatch = useDispatch();
   const handleAddCard = () => {
+    dispatch(cartTotal(selectedVariant));
+    localStorage.setItem('cartTotal', JSON.stringify(selectedVariant));
     console.log(selectedVariant);
   };
   return (
@@ -59,6 +64,7 @@ const Products = () => {
           <h2 className="font-medium font-jost text-primary text-[32px] w-[440px]">{product.name}</h2>
           <p className="text-second-primary my-4 p-2 bg-[rgba(9,136,255,0.1)] inline-block text-base font-medium">In Stock</p>
           <p className="font-jost text-primary font-medium pb-2 text-2xl">Price : {selectedVariant.price} $</p>
+          <p className="font-jost text-primary font-normal pb-2 text-xl">Quantity : {selectedVariant.quantity} </p>
 
           <div className="flex gap-2 my-2">
             
@@ -80,6 +86,7 @@ const Products = () => {
               <CiHeart />
               Add To Wishlist
             </div>
+
           </div>
         </div>
       </div>

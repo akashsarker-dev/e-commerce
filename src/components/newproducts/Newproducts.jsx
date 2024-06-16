@@ -59,7 +59,7 @@ function Newproducts() {
                                 src={product.image}
                                 alt=""
                             />
-                            <Badge ></Badge>
+                            {/* <Badge ></Badge> */}
                         </div>
                         <Productdetails></Productdetails>
                     </div>
