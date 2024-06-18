@@ -9,7 +9,8 @@ import { Link, useParams } from 'react-router-dom';
 import axios from 'axios';
 import Breadcrumbs from '../../components/utils/Breadcrumbs';
 import { useDispatch } from 'react-redux';
-import CartSlice, { cartTotal } from '../../slices/CartSlice';
+import { addToCart } from '../../slices/CartSlice';
+
 
 const Products = () => {
   const { id } = useParams();
@@ -37,8 +38,8 @@ const Products = () => {
 
   const dispatch = useDispatch();
   const handleAddCard = () => {
-    dispatch(cartTotal(selectedVariant));
-    localStorage.setItem('cartTotal', JSON.stringify(selectedVariant));
+    dispatch(addToCart({...selectedVariant, qun : 1}));
+    localStorage.setItem('cartDetails', JSON.stringify(selectedVariant));
     console.log(selectedVariant);
   };
   return (

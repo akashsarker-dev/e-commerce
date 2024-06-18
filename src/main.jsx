@@ -12,6 +12,7 @@ import Contacts from "./pages/contacts/Contacts.jsx";
 import Shop from './pages/Shop/Shop';
 import { Provider } from 'react-redux'
 import store from "./store.jsx";
+import Cart from "./pages/cart/Cart.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -22,7 +23,7 @@ const router = createBrowserRouter(
       <Route path='/login' element={<Login />} />
       <Route path='/contacts' element={<Contacts />} />
       {/* <Route path='/product' element={<Products />} /> */}
-      {/* <Route path='/cart' element={<Cart />} /> */}
+      <Route path='/cart' element={<Cart />} />
       <Route path='/products' element={<Shop />} />
       <Route path='/products/:id' element={<Products/>} />
 

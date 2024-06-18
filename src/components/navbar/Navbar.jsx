@@ -36,16 +36,7 @@ const Navbar = () => {
   return (
     <>
       <div class="grid grid-cols-12 gap-4 max-w-container mx-auto py-8">
-        <div class="col-span-3">
-          <div className=" relative">
-            <BiMenuAltLeft onClick={handleSidebar} className=" text-4xl cursor-pointer" ></BiMenuAltLeft>
-          {sidebar && (
-            <div ref={mobileNavRef} className=" w-[260px] bg-[#2D2D2D] z-40   mt-4 absolute top-5 left-3" >
-              <Sidebar ></Sidebar>
-            </div>
-          )}
-          </div>
-        </div>
+       
         <div class="col-span-6 mx-auto">
           <ul className="flex gap-10 text-xl font-medium font-roboto text-primary">
             <Link to={"/"}>

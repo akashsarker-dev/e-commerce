@@ -32,7 +32,7 @@ const UserButton = forwardRef((props, ref) => {
 
   return (
     <>
-    <div ref={ref} className="mt-7 flex flex-col w-40 bg-slate-200 absolute top-6 rounded -left-8 p-3">
+    <div ref={ref} className="mt-7 flex flex-col w-40 bg-slate-200 absolute top-6 rounded right-0 p-3">
       
       {isLoggedIn ? (
         <div className="flex flex-col gap-3 items-start">

@@ -5,6 +5,7 @@ import Newproducts from '../../components/newproducts/newproducts'
 import { ToastContainer, toast, Bounce } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Demo from '../demo/demo';
+import SearchNavSidebar from '../../components/layout/SearchNavSidebar';
 
 export default function Home() {
   return (
@@ -27,6 +28,7 @@ export default function Home() {
   <LinksContainer></LinksContainer>
   <Newproducts></Newproducts>
   {/* <Demo/> */}
+  {/* <SearchNavSidebar/> */}
     </div>
   )
 }
