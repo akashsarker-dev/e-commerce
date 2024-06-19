@@ -35,7 +35,7 @@ const Navbar = () => {
   
   return (
     <>
-      <div class="grid grid-cols-12 gap-4 max-w-container mx-auto py-8">
+      <div class=" hidden sm:grid grid-cols-12 gap-4 max-w-container mx-auto py-8">
        
         <div class="col-span-6 mx-auto">
           <ul className="flex gap-10 text-xl font-medium font-roboto text-primary">

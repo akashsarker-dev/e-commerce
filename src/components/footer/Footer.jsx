@@ -9,9 +9,9 @@ import { HiOutlineLocationMarker } from "react-icons/hi";
 
 const Footer = () => {
   return (
-    <div className="bg-[#F4F7F9]">
-      <div className="max-w-container  mx-auto flex flex-wrap justify-between py-16">
-        <div className=" w-1/3 flex ">
+    <div className="bg-[#F4F7F9] px-2">
+      <div className="max-w-container  mx-auto flex flex-wrap gap-4 py-16">
+        <div className=" sm:w-1/3 flex flex-wrap ">
           <div>
             <p className=" text-xl text-primary font-medium w-[320px] py-7">
               We are a team of designers and developers that create high quality
@@ -30,7 +30,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="w-2/3 flex justify-around">
+        <div className="sm:w-2/3 gap-4 flex flex-wrap justify-between sm:justify-around ">
           <div>
             <h4 className=" text-primary text-xl font-roboto font-bold">
               My Account

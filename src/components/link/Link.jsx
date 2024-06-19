@@ -6,7 +6,7 @@ const linksContent = [{ title: "Headphones", count: "25 Product" }];
 
 const Link = ({ title, count }) => (
   <div>
-    <img src={LinkImg} alt="" />
+    <img className="w-36" src={LinkImg} alt="" />
     <h6 className="text-center text-xl font-roboto font-medium text-primary mt-2">
       {title}
     </h6>
@@ -15,7 +15,7 @@ const Link = ({ title, count }) => (
 );
 
 const DeliveryContent = ({ icon, title, description }) => (
-  <div className="flex bg-[#F6F7F9] py-8 pl-10">
+  <div className="flex bg-[#F6F7F9] sm:py-8 p-3 sm:pl-10 ">
     {icon}
     <div>
       <h4 className="font-bold font-roboto text-base">{title}</h4>
@@ -45,18 +45,17 @@ const deliveryContents = [
     title: "Free Delivery",
     description: "Orders from all items",
   },
-  // Add more delivery contents as needed
 ];
 
 const LinksContainer = () => (
   <>
-    <div className="max-w-container mx-auto py-12 flex flex-wrap justify-center gap-10">
-      {Array(5).fill() .map((_, index) => (
+    <div className="max-w-container mx-auto sm:py-12 py-4 flex flex-wrap justify-center gap-10">
+      {Array(4).fill() .map((_, index) => (
           <Link key={index} {...linksContent[0]} />
         ))}
     </div>
 
-    <div className="max-w-container mx-auto grid grid-cols-4 gap-1">
+    <div className="max-w-container mx-auto grid sm:grid-cols-4 grid-cols-2 gap-1">
       {deliveryContents.map((content, index) => (
         <DeliveryContent key={index} {...content} />
       ))}

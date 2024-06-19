@@ -1,13 +1,16 @@
 import React from 'react'
 import Navbar from '../navbar/Navbar'
-import SearchNav from '../searchnav/searchnav'
 import { Outlet } from 'react-router-dom'
 import Footer from '../footer/Footer'
+import SearchNav from '../searchnav/SearchNav'
 
 export const Rootlayout = () => {
   return (
     <div>
+      <div className='py-6'>
+      
         <SearchNav></SearchNav>
+      </div>
         <Navbar></Navbar>
         <Outlet></Outlet>
         <Footer></Footer>

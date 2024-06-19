@@ -9,7 +9,7 @@ import SearchNavSidebar from '../../components/layout/SearchNavSidebar';
 
 export default function Home() {
   return (
-    <div>
+    <div className='px-1'>
  <ToastContainer
         position="top-right"
         autoClose={5000}

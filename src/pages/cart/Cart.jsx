@@ -6,39 +6,41 @@ import { HiMinusSm } from 'react-icons/hi';
 import { useDispatch, useSelector } from 'react-redux';
 import { updateQuantity } from '../../slices/CartSlice';
 import { act } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Cart = () => {
   const [productInfo, setProductInfo] = useState([]);
 
-  // Get cart details from Redux state
   const cartDetails = useSelector(state => state.cartDetails.value);
 
-  // Update productInfo when cartDetails change
   useEffect(() => {
     setProductInfo(cartDetails);
   }, [cartDetails]);
 
-  // Format data for DataTable
-
-
-  const formattedData = productInfo.map(item => (
-    {
+  const formattedData = productInfo.map(item => ({
     ...item,
     quantity: 1,
     product: item.product
   }));
-
-
+  
   const dispatch = useDispatch();
   const decreaseQuantity = (index) => {
     dispatch(updateQuantity({id : index, qun , act: 'sub'}));
   };
+const navigate = useNavigate();
+  const handleClick = () => {
+  
+    navigate('/checkout', )
+  }
 
   const [qun, setQun] = useState(1);
   const increaseQuantity = (index) => {
     console.log(index);
     dispatch(updateQuantity({id : index, qun , act: 'add'}));
   };
+
+  const tolal = productInfo.reduce((acc, item) => acc + item.price * item.qun, 0);
+  console.log(tolal);
 
   const columns = [
     // {
@@ -55,7 +57,7 @@ const Cart = () => {
       },
       {
         name: 'Price',
-        selector: row => row.price,
+        selector: row => row.price ,
         sortable: true
       },
     {
@@ -71,21 +73,30 @@ const Cart = () => {
     },
     {
       name: 'Total',
-      selector: row => row.price * row.quantity,
-      sortable: true
+      selector: row => row.price *  row.qun
     },
   ];
 
   return (
     <div className="p-4 container mx-auto">
-      <DataTable
-        title="Product Data"
-        columns={columns}
-        data={formattedData}
-        pagination
-        highlightOnHover
-      />
+    <DataTable
+      title="Product Data"
+      columns={columns}
+      data={formattedData}
+      progress
+      pagination
+      responsive
+      highlightOnHover/>
+
+    <div className="text-right">
+      <h3 className="text-md font-bold">Total: ${tolal}</h3>
+
+      <button onClick={handleClick}  className="bg-blue-500 text-white text-md font-bold rounded p-2 mt-4">
+     
+  Proceed to checkout
+      </button>
     </div>
+  </div>
   );
 };
 

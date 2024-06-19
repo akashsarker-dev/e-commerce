@@ -7,6 +7,7 @@ import { BiMenuAltRight } from 'react-icons/bi';
 import UserButton from '../userbutton/UserButton';
 import CartPopup from '../layout/Cartpopup';
 import SearchNavSidebar from '../layout/SearchNavSidebar';
+import SearchProducts from '../searchproducts/SearchProducts';
 
 const SearchNav = ({ className }) => {
   const [showUserMenu, setShowUserMenu] = useState(false);
@@ -39,15 +40,15 @@ const SearchNav = ({ className }) => {
 
 
   return (
-    <div className="border-2 border-[#00000021]">
-      <div className="sm:grid flex items-center justify-between grid-cols-12 gap-4 max-w-container mx-auto sm:py-4 py-2">
+    <div className="border-2 border-[#00000021] z-50 fixed w-full top-0 left-0 bg-inherit ">
+      <div className="sm:grid flex items-center justify-between grid-cols-12 gap-4 max-w-container mx-auto sm:py-4 p-4 shadow-md bg-white">
         <div className="col-span-3">
-          <Link to="/" className="md:text-3xl font-extrabold text-primary">
-            ShopCraftify
+          <Link to="/" className="md:text-3xl text-2xl font-bold text-black">
+          Shofy.
           </Link>
         </div>
         <div className="col-span-6 hidden sm:block">
-          <div className="relative bg-white border-4 border-second-primary py-3 px-5 md:w-[600px] w-full rounded-lg mx-auto">
+          {/* <div className="relative bg-white border-4 border-second-primary py-3 px-5 md:w-[600px] w-full rounded-lg mx-auto">
             <input
               className="text-lg focus:outline-none w-[90%]"
               type="search"
@@ -56,7 +57,10 @@ const SearchNav = ({ className }) => {
             <div className="py-4 px-5 absolute top-0 right-0 w-15 h-full bg-second-primary">
               <IoSearch className="text-white text-2xl" />
             </div>
-          </div>
+          </div> */}
+
+
+          <SearchProducts/>
         </div>
         <div className="col-span-3 flex justify-end items-center gap-6">
           <div
@@ -72,17 +76,9 @@ const SearchNav = ({ className }) => {
             />
             {cardPopup && <CartPopup ref={mobileNavRef} className="absolute right-0 top-8" />}
           </div>
-          {/* <div className="relative sm:hidden block">
-            <BiMenuAltRight
-              className="text-4xl cursor-pointer"
-            />
-            {sidebar && (
-              <div
-                className="w-[260px] bg-[#2D2D2D] z-40 mt-4 absolute top-5 right-0">
-               
-              </div>
-            )}
-          </div> */}
+          <div className=" sm:hidden block">
+            <SearchNavSidebar/>
+          </div>
         </div>
       </div>
     </div>

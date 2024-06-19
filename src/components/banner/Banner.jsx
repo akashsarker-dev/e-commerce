@@ -51,7 +51,7 @@ function Banner() {
   };
 
   return (
-    <div className="slider-container mx-auto">
+    <div className="slider-container mx-auto py-10">
       <Slider {...settings}>
         <div>
           <img className=" w-full" src={BannerImg} alt="" />

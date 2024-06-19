@@ -13,6 +13,8 @@ import Shop from './pages/Shop/Shop';
 import { Provider } from 'react-redux'
 import store from "./store.jsx";
 import Cart from "./pages/cart/Cart.jsx";
+import Checkout from "./pages/checkout/Checkout.jsx";
+import SuccessMessage from "./pages/SuccessMessage/SuccessMessage.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -26,6 +28,9 @@ const router = createBrowserRouter(
       <Route path='/cart' element={<Cart />} />
       <Route path='/products' element={<Shop />} />
       <Route path='/products/:id' element={<Products/>} />
+      <Route path='checkout' element={<Checkout/>} />
+      <Route path='successmessage' element={<SuccessMessage/>} />
+
 
       <Route path="*" element={<Notfound />} />
     </Route>
