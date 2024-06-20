@@ -40,8 +40,8 @@ const SearchNav = ({ className }) => {
 
 
   return (
-    <div className="border-2 border-[#00000021] z-50 fixed w-full top-0 left-0 bg-inherit ">
-      <div className="sm:grid flex items-center justify-between grid-cols-12 gap-4 max-w-container mx-auto sm:py-4 p-4 shadow-md bg-white">
+    <div className="border-2 border-[#00000021] z-50 fixed w-full bg-white top-0 left-0 bg-inherit shadow-md ">
+      <div className="sm:grid flex items-center justify-between grid-cols-12 gap-4 max-w-container mx-auto sm:py-4 p-4 ">
         <div className="col-span-3">
           <Link to="/" className="md:text-3xl text-2xl font-bold text-black">
           Shofy.

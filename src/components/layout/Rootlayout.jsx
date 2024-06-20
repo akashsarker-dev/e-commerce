@@ -7,7 +7,7 @@ import SearchNav from '../searchnav/SearchNav'
 export const Rootlayout = () => {
   return (
     <div>
-      <div className='py-6'>
+      <div className=' mb-20'>
       
         <SearchNav></SearchNav>
       </div>
