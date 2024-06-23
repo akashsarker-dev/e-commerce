@@ -13,7 +13,7 @@ export default function Productinfo() {
   useEffect(() => {
     async function fetchData() {
       try {
-        const response = await axios.get('http://localhost:3000/api/v1/product/getallproduct');
+        const response = await axios.get('https://e-commerce-backend-phi-eight.vercel.app/api/v1/product/getallproduct');
         setProduct(response.data);
       } catch (error) {
         console.error('Error fetching products:', error);

@@ -18,7 +18,7 @@ const Navbar = () => {
             </Link>
             <Link Link to={"/products"}>Products</Link>
             <Link to={"/about"}>About</Link>
-            <Link to={"/contact"}>Contacts</Link>
+            <Link to={"/contactpage"}>Contacts</Link>
           <div className=" flex items-center gap-3">
             <FiPhoneCall className=" text-2xl text-second-primary"></FiPhoneCall>
             <p className=" text-base font-roboto font-semibold">

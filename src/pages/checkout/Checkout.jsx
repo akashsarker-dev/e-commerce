@@ -43,7 +43,7 @@ const Checkout = () => {
       };
 
       // Example POST request to your API endpoint
-      const response = await axios.post('http://localhost:3000/api/v1/payment/sslcommerz', postData);
+      const response = await axios.post('https://e-commerce-backend-phi-eight.vercel.app/api/v1/payment/sslcommerz', postData);
 
       // Redirect to SSLCommerz checkout page
       window.location.replace(`https://sandbox.sslcommerz.com/EasyCheckOut/${response.data.url}`);

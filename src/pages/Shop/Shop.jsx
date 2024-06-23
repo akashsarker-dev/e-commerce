@@ -20,13 +20,13 @@ export default function Shop() {
       <h2 className="font-bold text-[49px] text-primary">Products</h2>
       <Breadcrumbs></Breadcrumbs>
 
-      <div className=' flex gap-5 py-20'>
-        <div className='w-1/5 bg-[#F3F3F3] p-4 rounded-md'>
+      <div className=' flex gap-5 py-20 '>
+        <div className='w-1/5 bg-[#F3F3F3] p-4 rounded-md hidden sm:block'>
           <Categorysidebar />
-          <Brandsidebar></Brandsidebar>
-          <Colorsidebar></Colorsidebar>
+          {/* <Brandsidebar></Brandsidebar> */}
+          {/* <Colorsidebar></Colorsidebar> */}
         </div>
-        <div className='w-4/5 bg-slate-200 p-10 rounded-lg'>
+        <div className='sm:w-4/5 w-full bg-slate-200 p-10 rounded-lg'>
           <div className=" mb-10 flex items-center gap-6 justify-end">
             <>
             <label htmlFor="countries">Sort by :</label>

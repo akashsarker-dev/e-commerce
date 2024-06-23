@@ -27,7 +27,7 @@ export default function Login() {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("http://localhost:3000/api/v1/athentication/login", loginData);
+      const response = await axios.post("https://e-commerce-backend-phi-eight.vercel.app/api/v1/athentication/login", loginData);
       console.log(response.data); 
 
       if (response.data.error) {

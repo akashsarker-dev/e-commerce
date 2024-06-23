@@ -6,19 +6,25 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 
 function Items({ currentItems }) {
+  const getFirst10Words = (text) => {
+    return text.slice(0, 28);
+  };
+  const getFirst5letter = (text) => {
+    return text.slice(0, 28);
+  };
   return (
     <div className='grid md:grid-cols-3 gap-4 grid-cols-1 sm:grid-cols-2'>
       {currentItems &&
         currentItems.map((item) => (
           <div key={item._id}>
             <div className="border-[1px] p-2 border-gray-400 rounded-xl hover:shadow-xl duration-300 overflow-hidden cursor-pointer group">
-              <div>
+              <Link to={`/products/${item?._id}`}>
                 <img
-                  className=" duration-500 overflow-hidden rounded-md" src={ProductImg} alt="" />
-                  <Link to={`/products/${item?._id}`} className="text-primary font-bold text-sm">{item.name}</Link>
-                  <p>{item.description}</p>
+                  className=" duration-500 overflow-hidden rounded-md" src={item.variants[0]?.image} alt="" />
+                  <Link to={`/products/${item?._id}`} className="text-primary font-bold text-sm">{getFirst5letter(item.name)}...</Link>
+                  <p>{getFirst10Words(item.description)}...</p>
                   {/* Render other properties as needed */}
-              </div>
+              </Link>
             </div>
           </div>
         ))}
@@ -33,7 +39,7 @@ export default function Paginate({ itemsPerPage }) {
   useEffect(() => {
     async function fetchData() {
       try {
-        const response = await axios.get('http://localhost:3000/api/v1/product/getallproduct');
+        const response = await axios.get('http://e-commerce-backend-phi-eight.vercel.app/api/v1/product/getallproduct');
         setProduct(response.data);
       } catch (error) {
         console.error('Error fetching products:', error);

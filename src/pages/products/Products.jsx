@@ -21,7 +21,7 @@ const Products = () => {
   useEffect(() => {
     async function fetchData() {
       try {
-        const response = await axios.get(`http://localhost:3000/api/v1/product/getallproduct/${id}`);
+        const response = await axios.get(`https://e-commerce-backend-phi-eight.vercel.app/api/v1/product/getallproduct/${id}`);
         setProduct(response.data);
         setSelectedVariant(response.data.variants[0]);
       } catch (error) {
@@ -43,12 +43,12 @@ const Products = () => {
     console.log(selectedVariant);
   };
   return (
-    <div className="max-w-container mx-auto gap-10">
+    <div className="max-w-container mx-auto gap-10 px-2">
       <Breadcrumbs />
       <div className="max-w-container mx-auto flex flex-wrap gap-10 py-20">
         <div>
-          <img className="w-[440px]" src={selectedVariant.image} alt="" />
-          <div className="w-[600px] h-[100px] flex gap-4 mt-4">
+          <img className="sm:w-[440px] " src={selectedVariant.image} alt="" />
+          <div className="sm:w-[600px]  h-[100px] flex gap-4 mt-4">
             {product.variants.map((variant) => (
               <img
                 key={variant._id}
@@ -62,22 +62,22 @@ const Products = () => {
         </div>
 
         <div>
-          <h2 className="font-medium font-jost text-primary text-[32px] w-[440px]">{product.name}</h2>
+          <h2 className="font-medium font-jost text-primary text-2xl sm:text-[32px] sm:w-[440px]">{product.name}</h2>
           <p className="text-second-primary my-4 p-2 bg-[rgba(9,136,255,0.1)] inline-block text-base font-medium">In Stock</p>
           <p className="font-jost text-primary font-medium pb-2 text-2xl">Price : {selectedVariant.price} $</p>
           <p className="font-jost text-primary font-normal pb-2 text-xl">Quantity : {selectedVariant.quantity} </p>
 
-          <div className="flex gap-2 my-2">
+          <div className="flex flex-wrap gap-2 my-2">
             
 
-            <button onClick={handleAddCard} className="py-3 border-[1px] border-[#E0E2E3] w-full font-normal text-base">Add to cart</button>
-          </div>
-
-          <button type="button" className="py-3 bg-second-primary w-full text-white font-jost font-medium text-base">
+            <button onClick={handleAddCard} className="py-3 border-[1px] border-[#E0E2E3] w-[160px] sm:w-full font-normal text-base">Add to cart</button>
+          <button type="button" className="py-3 bg-second-primary w-[160px] sm:w-full  text-white font-jost font-medium text-base">
             <Link to={`/cart`}>Buy Now</Link>
           </button>
+          </div>
 
-          <div className="flex items-center gap-3 py-4 border-b-2 border-r-emerald-800">
+
+          <div className="flex items-center sm:w-full w-[300px] gap-3 py-4 border-b-2 border-r-emerald-800">
             <div className="flex items-center gap-1 text-base cursor-pointer hover:text-second-primary duration-300">
               <GoArrowSwitch />
               Compare

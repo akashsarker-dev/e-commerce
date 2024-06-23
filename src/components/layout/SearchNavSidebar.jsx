@@ -1,6 +1,7 @@
 import React from 'react';
 import { AiOutlineMenu } from "react-icons/ai";
 import { useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
 import { ToastContainer, toast, Bounce } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -65,7 +66,7 @@ export default function SearchNavSidebar() {
           <div className={`absolute right-0 top-0  w-full h-full`} >
           <div  ref={mobileNavRef} className={`flex flex-col bg-white`}>
           <header className="flex justify-between items-center p-4 shadow-md">
-              <span className="text-2xl font-bold text-black">Shofy.</span>
+             <img src="https://i.ibb.co/DCXXwd1/logo.png" alt="" srcset="" />
             
             <button onClick={handleSidebar} className="text-gray-400  text-4xl focus:outline-none">
               &times;
@@ -83,42 +84,32 @@ export default function SearchNavSidebar() {
             <nav>
               
               <ul className="space-y-2">
-                <li>
-                  <a href="/" className="flex justify-between items-center p-2 border rounded-md shadow-sm text-black hover:bg-gray-100">
+                <li onClick={handleSidebar}>
+                  <Link to="/" className="flex justify-between items-center p-2 border rounded-md shadow-sm text-black hover:bg-gray-100">
                     Home
                    
-                  </a>
+                  </Link>
                 </li>
-                <li>
-                  <a href="#" className="flex justify-between items-center p-2 border rounded-md shadow-sm text-black hover:bg-gray-100">
-                    Shop
+                <li onClick={handleSidebar} >
+                  <Link to="/products"  className="flex justify-between items-center p-2 border rounded-md shadow-sm text-black hover:bg-gray-100">
+                  Products
                  
-                  </a>
+                  </Link>
                 </li>
-                <li>
-                  <a href="#" className="flex justify-between items-center p-2 border rounded-md shadow-sm text-black hover:bg-gray-100">
-                    Vendors
+
+                <li onClick={handleSidebar} >
+                  <Link to="/about"  className="flex justify-between items-center p-2 border rounded-md shadow-sm text-black hover:bg-gray-100">
+                  About
                    
-                  </a>
+                  </Link>
                 </li>
-                <li>
-                  <a href="#" className="flex justify-between items-center p-2 border rounded-md shadow-sm text-black hover:bg-gray-100">
-                    Pages
+                <li onClick={handleSidebar}>
+                  <Link to="/contact"  className="flex justify-between items-center p-2 border rounded-md shadow-sm text-black hover:bg-gray-100">
+                  Contacts
                    
-                  </a>
+                  </Link>
                 </li>
-                <li>
-                  <a href="#" className="flex justify-between items-center p-2 border rounded-md shadow-sm text-black hover:bg-gray-100">
-                    Blog
-                   
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="flex justify-between items-center p-2 border rounded-md shadow-sm text-black hover:bg-gray-100">
-                    Contact
-                    
-                  </a>
-                </li>
+               
               </ul>
             </nav>
           </div>

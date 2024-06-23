@@ -30,7 +30,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="sm:w-2/3 gap-4 flex flex-wrap justify-between sm:justify-around ">
+        <div className=" gap-4 flex flex-wrap justify-between sm:justify-around ">
           <div>
             <h4 className=" text-primary text-xl font-roboto font-bold">
               My Account

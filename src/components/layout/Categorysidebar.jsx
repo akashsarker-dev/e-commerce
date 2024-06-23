@@ -10,7 +10,7 @@ export default function Categorysidebar() {
   useEffect(() => {
     async function getAllCategory() {
       try {
-        const response = await axios.get('http://localhost:3000/api/v1/category/getallcategory');
+        const response = await axios.get('https://e-commerce-backend-phi-eight.vercel.app/api/v1/category/getallcategory');
         setCategory(response.data);
       } catch (error) {
         console.error('Error fetching categories:', error);

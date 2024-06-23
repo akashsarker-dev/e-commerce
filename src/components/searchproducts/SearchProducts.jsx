@@ -22,7 +22,7 @@ const SearchProducts = () => {
     e.preventDefault();
     setLoading(true);
     try {
-      const response = await axios.get(`http://localhost:3000/api/v1/product/search?q=${query}`);
+      const response = await axios.get(`https://e-commerce-backend-phi-eight.vercel.app/api/v1/product/search?q=${query}`);
       setResults(response.data);
       if (response.data.length === 0) {
         setNotProduct('No results found.');

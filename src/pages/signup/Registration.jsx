@@ -34,7 +34,7 @@ export default function Registration() {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "http://localhost:3000/api/v1/athentication/registration",
+        "http://e-commerce-backend-phi-eight.vercel.app/api/v1/athentication/registration",
         registerData
       );
       console.log("Response:", response.data);

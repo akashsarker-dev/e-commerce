@@ -86,7 +86,9 @@ const navigate = useNavigate();
       progress
       pagination
       responsive
-      highlightOnHover/>
+      highlightOnHover
+    
+      />
 
     <div className="text-right">
       <h3 className="text-md font-bold">Total: ${tolal}</h3>

@@ -44,7 +44,7 @@ const SearchNav = ({ className }) => {
       <div className="sm:grid flex items-center justify-between grid-cols-12 gap-4 max-w-container mx-auto sm:py-4 p-4 ">
         <div className="col-span-3">
           <Link to="/" className="md:text-3xl text-2xl font-bold text-black">
-          Shofy.
+          <img src="https://i.ibb.co/DCXXwd1/logo.png" alt="logo" border="0"></img>
           </Link>
         </div>
         <div className="col-span-6 hidden sm:block">
