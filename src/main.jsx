@@ -2,9 +2,7 @@ import * as React from "react";
 import * as ReactDOM from "react-dom/client";
 import "./index.css";
 import { createRoutesFromElements, createBrowserRouter, Route, RouterProvider } from "react-router-dom";
-import { Rootlayout } from "./components/layout/Rootlayout.jsx";
 import Home from "./pages/home/Home.jsx";
-import Products from "./pages/Products/Products.jsx";
 import Registration from "./pages/signup/Registration.jsx";
 import Login from "./pages/login/Login.jsx";
 import { Notfound } from "./pages/notfound/Notfound.jsx";
@@ -16,6 +14,8 @@ import Cart from "./pages/cart/Cart.jsx";
 import Checkout from "./pages/checkout/Checkout.jsx";
 import SuccessMessage from "./pages/SuccessMessage/SuccessMessage.jsx";
 import ContactPage from "./pages/ContactPage/ContactPage.jsx";
+import Products from './pages/products/Products';
+import { Rootlayout } from './pages/Rootlayout/Rootlayout';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -25,15 +25,12 @@ const router = createBrowserRouter(
       <Route path='/registration' element={<Registration />} />
       <Route path='/login' element={<Login />} />
       <Route path='/contacts' element={<Contacts />} />
-      {/* <Route path='/product' element={<Products />} /> */}
       <Route path='/cart' element={<Cart />} />
       <Route path='/products' element={<Shop />} />
       <Route path='/products/:id' element={<Products/>} />
       <Route path='checkout' element={<Checkout/>} />
       <Route path='contactpage' element={<ContactPage/>} />
       <Route path='successmessage' element={<SuccessMessage/>} />
-
-
       <Route path="*" element={<Notfound />} />
     </Route>
     </Route>
