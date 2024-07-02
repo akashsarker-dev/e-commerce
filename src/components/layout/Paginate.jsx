@@ -39,7 +39,8 @@ export default function Paginate({ itemsPerPage }) {
   useEffect(() => {
     async function fetchData() {
       try {
-        const response = await axios.get('http://e-commerce-backend-phi-eight.vercel.app/api/v1/product/getallproduct');
+        // const response = await axios.get('http://e-commerce-backend-phi-eight.vercel.app/api/v1/product/getallproduct');
+        const response = await axios.get('https://e-commerce-backend-phi-eight.vercel.app/api/v1/product/getallproduct');
         setProduct(response.data);
       } catch (error) {
         console.error('Error fetching products:', error);

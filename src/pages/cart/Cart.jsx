@@ -5,10 +5,12 @@ import { FaPlus } from 'react-icons/fa6';
 import { HiMinusSm } from 'react-icons/hi';
 import { useDispatch, useSelector } from 'react-redux';
 import { updateQuantity } from '../../slices/CartSlice';
-import { act } from 'react';
+import { useLocation } from 'react-router-dom';
 import { Link, useNavigate } from 'react-router-dom';
 
 const Cart = () => {
+  let location = useLocation();
+  console.log(location, 'gggg');
   const [productInfo, setProductInfo] = useState([]);
 
   const cartDetails = useSelector(state => state.cartDetails.value);

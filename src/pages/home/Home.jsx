@@ -27,8 +27,6 @@ export default function Home() {
     <Banner></Banner>
   <LinksContainer></LinksContainer>
   <Newproducts></Newproducts>
-  {/* <Demo/> */}
-  {/* <SearchNavSidebar/> */}
     </div>
   )
 }

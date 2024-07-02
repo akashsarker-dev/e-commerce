@@ -28,6 +28,9 @@ const Checkout = () => {
     }));
   };
 
+
+
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -51,6 +54,8 @@ const Checkout = () => {
       console.error('Error submitting form:', error);
     }
   };
+  let location = useLocation();
+  console.log(location, 'gggg');
 
   return (
     <div className="bg-gray-100 text-gray-900 min-h-screen flex items-center justify-center py-10">

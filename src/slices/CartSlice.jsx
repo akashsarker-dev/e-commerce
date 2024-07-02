@@ -25,8 +25,8 @@ export const CartSlice = createSlice({
       }
     },
     updateQuantity: (state, action) => {
-      console.log('action.payload:', action.payload);
-      console.log('state.value:', state.value);
+      // console.log('action.payload:', action.payload);
+      // console.log('state.value:', state.value);
       if(action.payload.act == 'add' ){
         state.value[action.payload.id].qun ++;
      }else if(action.payload.act == 'sub' ){

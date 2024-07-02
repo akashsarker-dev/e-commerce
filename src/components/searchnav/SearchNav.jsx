@@ -12,7 +12,6 @@ import SearchProducts from '../searchproducts/SearchProducts';
 const SearchNav = ({ className }) => {
   const [showUserMenu, setShowUserMenu] = useState(false);
   const [cardPopup, setCardPopup] = useState(false);
-  const [sidebar, setSidebar] = useState(false);
   const mobileNavRef = useRef(null);
 
   useEffect(() => {
@@ -48,16 +47,7 @@ const SearchNav = ({ className }) => {
           </Link>
         </div>
         <div className="col-span-6 hidden sm:block">
-          {/* <div className="relative bg-white border-4 border-second-primary py-3 px-5 md:w-[600px] w-full rounded-lg mx-auto">
-            <input
-              className="text-lg focus:outline-none w-[90%]"
-              type="search"
-              placeholder="Search Products"
-            />
-            <div className="py-4 px-5 absolute top-0 right-0 w-15 h-full bg-second-primary">
-              <IoSearch className="text-white text-2xl" />
-            </div>
-          </div> */}
+          
 
 
           <SearchProducts/>

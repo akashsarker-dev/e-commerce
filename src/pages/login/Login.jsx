@@ -5,7 +5,7 @@ import Formtitle from "../../components/utils/Formtitle";
 import Inputtitle from "../../components/utils/Inputtitle";
 import { IoEye } from "react-icons/io5";
 import { IoMdEyeOff } from "react-icons/io";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import axios from "axios";
 import { ToastContainer, toast, Bounce } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -23,12 +23,14 @@ export default function Login() {
     email: "",  
     password: "",
   });
+  let location = useLocation();
+  console.log(location, 'gggg');
   const dispatch = useDispatch();
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
       const response = await axios.post("https://e-commerce-backend-phi-eight.vercel.app/api/v1/athentication/login", loginData);
-      console.log(response.data); 
+      // console.log(response.data); 
 
       if (response.data.error) {
 
@@ -59,14 +61,14 @@ export default function Login() {
           localStorage.setItem('user', JSON.stringify(loginInfo(response.data)))
 
           setTimeout(() => {
-            navigate("/"); // Replace with your desired navigation path
+            navigate(location?.state?.prevUrl || "/");
           }, 3000);
           }
         
       
     } catch (error) {
       
-      console.log(error);
+      // console.log(error);
     }
   }
   
